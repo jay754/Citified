@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from "./pages/Home";
-import Drugs from "./pages/Drugs";
+import Search from "./pages/Search";
 
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Drugs" component={Drugs} />
+        <Tab.Screen name="Search" component={Search} />
       </Tab.Navigator>
     </NavigationContainer>
   );
