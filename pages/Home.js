@@ -23,12 +23,17 @@ const Search = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.logo}> 
+        Citified 
+      </Text>
+
       <TextInput
         style={styles.input}
         onChangeText={setTerm}
         value={term}
         placeholder="Search a term"
       />
+
       <Button title="Search" onPress={searchWord} />
       <ScrollView style={styles.resultsContainer}>
         {entries.map((entry, index) => (
@@ -45,21 +50,25 @@ const Search = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
     padding: 20,
-    backgroundColor: '#fde4f2'
+    backgroundColor: '#fde4f2',
   },
-  input: {
-    height: 40,
-    width: '100%',
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
+
+  logo: {
+    fontSize: 75,
+    alignItems: 'center',
+    justifyContent: 'center',  
   },
+
   resultsContainer: {
     width: '100%',
     marginTop: 20,
+    flexDirection: 'column',
+    flexGrow: 1
   },
   entryContainer: {
     marginBottom: 20,
