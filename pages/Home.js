@@ -35,7 +35,7 @@ const Search = () => {
       />
 
       <Button title="Search" onPress={searchWord} />
-      <ScrollView style={styles.resultsContainer}>
+      {entries.length !== 0 && <ScrollView style={styles.resultsContainer}>
         {entries.map((entry, index) => (
           <View key={index} style={styles.entryContainer}>
             <Text style={styles.wordText}>{entry.word}</Text>
@@ -43,14 +43,14 @@ const Search = () => {
             {entry.example ? <Text style={styles.exampleText}>Example: {entry.example}</Text> : null}
           </View>
         ))}
-      </ScrollView>
+      </ScrollView>}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
