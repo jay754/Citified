@@ -1,20 +1,33 @@
+// const Tab = createBottomTabNavigator();
+
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator>
+//         <Tab.Screen name="Home" component={Home} />
+//         <Tab.Screen name="Search" component={Search} />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 
-const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Search" component={Search} />
-      </Tab.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Search" component={Search} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
@@ -27,3 +40,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
