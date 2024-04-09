@@ -20,22 +20,22 @@ export default function App() {
       }}
     >
       <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Search"
-        component={Search}
+        component={Home}
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="book-search" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Surpise me"
+        component={Search}
+        options={{
+          tabBarLabel: 'Surpise me',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="arrow-down-drop-circle" color={color} size={size} />
           ),
         }}
       />
